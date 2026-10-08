@@ -1,0 +1,25 @@
+Client-Server Archictecture
+
+Client requests data - Server provides the data requested
+
+everything on internet needs to have an IP to be accessible and identifiable
+------------------------------------------------------------------------------------------------------------
+                                    DNS
+DNS - Domain Name Service, provides human readable form of server's IP address in order to facilitate better browsing.
+DNS is also just a server like any other servers
+
+-------------------------------------------------------------------------------------------------------------
+difference between HTTP and HTTPS
+HTTP - default port 80, server doesn't need certification, data is transferred in plain form without any encryption
+HTTPS - default port 4433, server needs certification to be recognized as having HTTPS (might be untrue), data is transferred securely over the network in encrypted form.
+
+the certificate HTTPS uses is called SSL (secure socket layer)
+
+-------------------------------------------------------------------------------------------------------------
+                                        PORTS and NGINX
+every service/software needs a port to communicate with other services/softwares to share innformation
+
+NGINX is used to anonymize ports from outside environments
+NGINX has reverse proxy which decides how to map the two exposed ports of 80, 443 to particular services running on different ports which are not exposed directly to network
+
+----------------------------------------------------------------------------------------------------------------
