@@ -8,14 +8,13 @@
 # assignments
 exit_flag = False
 
-mutable_student_object = {
-    
-}
+
 subjects = ("python", "DSA", "networks")
 students = []
 
 # Input function
 def getStudentDetails():
+    mutable_student_object = {}
     mutable_student_object["id"] = int(input("Student id : "))
     mutable_student_object["name"] = input("Student name : ")
     if "scores" not in mutable_student_object: 
@@ -31,7 +30,6 @@ while True:
     
     command = input("Done? ")
     if command == "Done" or command == "y" or command == "Y":
-        print("this : ", students)
         break
 
 results = {
@@ -39,4 +37,13 @@ results = {
     "FAIL" : []
 }
 for std in students:
-    print("will implement this later")
+    print("std : ", std)
+    sum = 0
+    for sub in std["scores"]:
+        sum += std["scores"][sub]
+    if sum / 3 >= 50:
+        results["PASS"] += std["name"]
+    else:
+        results["FAIL"] += std["name"]
+
+print(results)
