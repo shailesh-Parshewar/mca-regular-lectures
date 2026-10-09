@@ -1,0 +1,44 @@
+API
+
+API is how a process exposes its logic to intended processes, its the way you make your functions accessible to a network
+----------------------------------------------------------------------------------------------------------------
+HTTP methods
+
+GET, POST, DELETE, PUT, PATCH
+
+GET - used when client requires data from server
+POST - used when client wants to write some data to server
+DELETE - used when client wants to delete some data from server
+PUT/PATCH - used when client wants to update some data on server
+
+----------------------------------------------------------------------------------------------------------------
+Client server process
+
+while user makes a request : 
+user > client (browser) > HTTP method > server > Database
+
+when server responds : 
+Database > server > HTTP method > client (browser) > user
+
+----------------------------------------------------------------------------------------------------------------
+TOKENS
+
+Tokens are string of characters that help replace constant juggling of user credentials between user and login
+
+tokens are created using secure hashing methods that are one way encryption.
+once a hash is generated it's almost impossible to get original credentials based on hash. So guessing credentials becomes faster method than reverse-enginnering
+
+----------------------------------------------------------------------------------------------------------------
+
+HTTP codes
+200 - success code class
+300 - redirect code class
+500 - server error code class
+400 - client side error code class
+429 - rate limiting code (server stops responding to requests), happens when user requests too faster
+----------------------------------------------------------------------------------------------------------------
+
+NGINX
+
+NGINX is used to create and manage servers on a device
+NGINX can route requests to a specific file, page, or backend service.
