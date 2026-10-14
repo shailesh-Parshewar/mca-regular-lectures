@@ -1,0 +1,17 @@
+Create one single repository
+# 2nd line
+requirements:
+1. one repository
+    1.1. frontend
+    1.2. backend
+
+2. Database
+2.1.    decide on a suitable DB, example, mysql, postgresql, mongodb
+2.1.    decide whether you are going for local setup (on device) or go with hosting platforms like Atlas, Supabase with postgresql
+
+3. Diagrams
+3.1. user flow must be reliable enough and should represent the project completely in that aspect
+3.2. flowchart 
+3.3. use-case Diagrams
+3.4. Data Dictionary Diagrams
+3.5. ER Diagram
